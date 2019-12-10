@@ -48,16 +48,9 @@ class AdminController extends Controller
             'number'       => 'nullable|numeric',
             'postal_code'  => 'nullable|max:30',
             'city'         => 'nullable|string',
-            'phone_number' => 'required|numeric',
-            'yes_no'       => 'nullable'
+            'phone_number' => 'required|numeric'
         ]);
 
-        if ($request->yes_no == "true"){
-            $request->yes_no = 1;
-        }
-        else{
-            $request->yes_no = 0;
-        }
 
         User::insert([
             'name'          => $request->full_name,
@@ -76,7 +69,6 @@ class AdminController extends Controller
             'postal_code' => $request->postal_code,
             'city' => $request->city,
             'phone_number' => $request->phone_number,
-            'BKR_registered' => $request->yes_no,
             'created_at'    => now(),
             'updated_at'    => now()
         ]);

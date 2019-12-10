@@ -17,16 +17,9 @@ Route::get('/', function () {
 
 Auth::routes();
 
-//custom routes
 Route::get('/home', 'HomeController@index')->name('home');
-Route::get('profileIndex', 'profileController@index')->name('profileIndex');
-//Route::get('malfuction/workorder/show', 'malfunction@showCreationForm')->name('showCreateWorkOrder');
-//Route::get('malfuction/workorder/', 'malfunction@showCreationForm')->name('showCreateWorkOrder');
-
-// more controllers
 Route::resource('malfunction', 'malfunctionController');
 Route::resource('contact', 'contactController');
-Route::resource('profile', 'profileController');
 
 // Roles
 Route::resource('customer', 'CustomerController');
@@ -36,4 +29,5 @@ Route::resource('finance','FinanceController');
 Route::resource('maintenance','MaintenanceController');
 Route::resource('head_maintenance','HeadMaintenanceController');
 Route::resource('inkoop','InkoopController');
-Route::resource('work_order','WorkOrderController');
+route::resource('quotations', 'quotationsController');
+route::resource('BKR_checkController', 'BKR_checkController');

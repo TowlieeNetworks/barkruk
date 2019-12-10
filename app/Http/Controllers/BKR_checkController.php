@@ -1,17 +1,13 @@
 <?php
 
 namespace App\Http\Controllers;
-use App\quotation;
 
 use Illuminate\Http\Request;
+use \App\User;
+use \App\ComanyDetails;
 
-class quotationsController extends Controller
+class BKR_checkController extends Controller
 {
-
-    public function __construct()
-    {
-        $this->middleware('auth');
-    }
     /**
      * Display a listing of the resource.
      *
@@ -19,7 +15,7 @@ class quotationsController extends Controller
      */
     public function index()
     {
-        //
+        return view('sales.BKR_check');
     }
 
     /**
@@ -29,8 +25,7 @@ class quotationsController extends Controller
      */
     public function create()
     {
-
-        return view('sales/createquotation');
+        //
     }
 
     /**
@@ -41,10 +36,7 @@ class quotationsController extends Controller
      */
     public function store(Request $request)
     {
-        quotation_input::insert ([
-            'bedrijfs_naam'=> $request->Company_name,
-
-    ]);
+        //
     }
 
     /**
@@ -55,7 +47,7 @@ class quotationsController extends Controller
      */
     public function show($id)
     {
-        //
+
     }
 
     /**
@@ -66,7 +58,8 @@ class quotationsController extends Controller
      */
     public function edit($id)
     {
-        //
+        $company = ComanyDetails::find($id);
+                return view('sales/BKR_check_Edit', ['company'=>$company]);
     }
 
     /**
@@ -78,7 +71,18 @@ class quotationsController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $company = ComanyDetails::find($id);
+        if ($request->yes_no == "true"){
+            $request->yes_no = 1;
+        }
+        else{
+            $request->yes_no = 2;
+        }
+
+        $company->update([
+            'BKR_registered' => $request->yes_no
+        ]);
+        return redirect()->route('sales.index');
     }
 
     /**

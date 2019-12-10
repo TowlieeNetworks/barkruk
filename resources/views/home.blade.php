@@ -19,6 +19,8 @@
                         <a href="{{ route('sales.index') }}" class="btn btn-primary">sales</a>
                         <a href="{{ route('sales.create') }}" class="btn btn-primary">newcustomer</a>
                         <a href="{{ route('customer.index') }}" class="btn btn-primary">Customer Dashboard</a>
+                        <a href="{{ route('inkoop.index') }}" class="btn btn-primary">inkoper Dashboard</a>
+
                 </div>
             </div>
         </div>

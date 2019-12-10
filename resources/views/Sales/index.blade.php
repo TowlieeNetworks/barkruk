@@ -6,21 +6,17 @@
     <h1>Sales dashboard</h1>
     <ul>
         <li><a href="{{ route('sales.create') }}">klant aanmaken</a></li>
-        <li><a href="">prijsopgave maken</a></li>
+        <li><a href="{{ route('quotations.create') }}">Offerte aanmaken</a></li>
         <li><a href="">prijsopgave > offerte</a></li>
         <li><a href="">offerte emailen naar klant</a></li>
         <li><a href="">opmerkingen bij nieuwe klant</a></li>
     </ul>
 
-    @if(isset($data))
-
-        @dd($data)
-
-    @else
-
-        <p>geen data gevonden</p>
-
-    @endif
+    <ul>
+    @foreach($companies as $company)
+            <li><p>{{$company->user->name}}<a href="{{ route('BKR_checkController.edit', $company->id)}}" type="submit" class="btn btn-primary"style="margin-left: 2em;">BKR Check</a></p></li>
+        @endforeach
+    </ul>
 
 
 @endsection

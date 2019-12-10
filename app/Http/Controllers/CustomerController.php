@@ -81,8 +81,4 @@ class customerController extends Controller
     {
         //
     }
-
-    public function  iets(){
-        dd("iets iets");
-    }
 }

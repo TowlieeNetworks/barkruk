@@ -43,7 +43,7 @@ class LoginController extends Controller
             return redirect()->route('admin.index');
         }
         elseif($user->role_id == 2){
-            return redirect()->route('sales.index');
+            return redirect()->route('customer');
         }
         elseif($user->role_id == 3){
             return redirect()->route('finance.index');

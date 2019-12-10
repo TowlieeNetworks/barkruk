@@ -22,7 +22,7 @@
             <input class="col-lg-2" type="email" id="email" name="email" placeholder="E-mail" required><br>
 
             <label for="notes" class="col-md-4 col-form-label text-md-right">Notities</label>
-            <textarea class="col-lg-2" type="text" id="notes" name="notes" rows="4" cols="50" placeholder="Enter notes here..." required></textarea><br>
+            <textarea class="col-lg-2" type="text" id="notes" name="notes" rows="4" cols="50" placeholder="Enter notes here..."></textarea><br>
         </div>
         <div class="company_input">
             <label for="company_name" class="col-md-4 col-form-label text-md-right">Bedrijfs Naam *</label>

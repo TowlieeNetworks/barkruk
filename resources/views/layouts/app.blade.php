@@ -55,9 +55,6 @@
                                                      document.getElementById('logout-form').submit();">
                                         {{ __('Logout') }}
                                     </a>
-                                    <a>
-                                        <a class="dropdown-item" href="{{ Route('profile.index') }}">{{ __('View Profile') }}</a>
-                                    </a>
 
                                     <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
                                         @csrf

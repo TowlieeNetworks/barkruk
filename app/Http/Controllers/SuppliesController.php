@@ -1,17 +1,12 @@
 <?php
 
 namespace App\Http\Controllers;
-use App\quotation;
 
+use App\supplies;
 use Illuminate\Http\Request;
 
-class quotationsController extends Controller
+class SuppliesController extends Controller
 {
-
-    public function __construct()
-    {
-        $this->middleware('auth');
-    }
     /**
      * Display a listing of the resource.
      *
@@ -29,8 +24,7 @@ class quotationsController extends Controller
      */
     public function create()
     {
-
-        return view('sales/createquotation');
+        //
     }
 
     /**
@@ -41,19 +35,16 @@ class quotationsController extends Controller
      */
     public function store(Request $request)
     {
-        quotation_input::insert ([
-            'bedrijfs_naam'=> $request->Company_name,
-
-    ]);
+        //
     }
 
     /**
      * Display the specified resource.
      *
-     * @param  int  $id
+     * @param  \App\supplies  $supplies
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show(supplies $supplies)
     {
         //
     }
@@ -61,10 +52,10 @@ class quotationsController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  int  $id
+     * @param  \App\supplies  $supplies
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit(supplies $supplies)
     {
         //
     }
@@ -73,10 +64,10 @@ class quotationsController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
+     * @param  \App\supplies  $supplies
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request, supplies $supplies)
     {
         //
     }
@@ -84,10 +75,10 @@ class quotationsController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  int  $id
+     * @param  \App\supplies  $supplies
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(supplies $supplies)
     {
         //
     }
