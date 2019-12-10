@@ -42,7 +42,7 @@ class quotationsController extends Controller
     public function store(Request $request)
     {
         quotation_input::insert ([
-            'bedrijfs_naam'=> $request->Company_name,
+        'bedrijfs_naam'=> $request->Company_name,
 
     ]);
     }

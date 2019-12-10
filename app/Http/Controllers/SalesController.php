@@ -19,8 +19,7 @@ class salesController extends Controller
      */
     public function index()
     {
-        $companies = ComanyDetails::All()->where('BKR_registered', '==', null);
-        return view('sales.index' , ['companies'=>$companies]);
+        return view('sales.index');
     }
 
     /**
@@ -67,8 +66,16 @@ class salesController extends Controller
            'number'       => 'required|numeric',
            'postal_code'  => 'required|max:30',
            'city'         => 'required|string',
-           'phone_number' => 'required|numeric'
+           'phone_number' => 'required|numeric',
+           'yes_no'       => 'required'
         ]);
+
+        if ($request->yes_no == "true"){
+            $request->yes_no = 1;
+        }
+        else{
+            $request->yes_no = 0;
+        }
 
         User::insert([
             'name'          => $request->full_name,
@@ -82,16 +89,28 @@ class salesController extends Controller
 
         ComanyDetails::insert([
            'user_id' => $user->id,
+           'company_name' => $request->company_name,
            'street_name'=> $request->street_name,
            'number' => $request->number,
            'postal_code' => $request->postal_code,
            'city' => $request->city,
            'phone_number' => $request->phone_number,
+           'BKR_registered' => $request->yes_no,
            'created_at'    => now(),
            'updated_at'    => now()
         ]);
 
         $id = Auth::id();
+
+        if ($request->notes != ""){
+            Notes::insert([
+                'sales_id' => $id,
+                'customer_id' => $user->id,
+                'content' => $request->notes,
+                'created_at'    => now(),
+                'updated_at'    => now()
+            ]);
+        };
 
         Notes::insert([
             'sales_id' => $id,
@@ -120,8 +139,7 @@ class salesController extends Controller
      */
     public function show($id)
     {
-        $users = ComanyDetails::find($id);
-        return view('sales/show', ['user'=>$users]);
+        //
     }
 
     /**

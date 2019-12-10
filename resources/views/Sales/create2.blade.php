@@ -28,7 +28,7 @@
                 <input class="col-lg-2" type="password" id="password_confirmation" name="password_confirmation" placeholder="Wachtwoord Confirm" required><br>
 
                 <label for="notes" class="col-md-4 col-form-label text-md-right">Notities</label>
-                <textarea class="col-lg-2" type="text" id="notes" name="notes" rows="4" cols="50" placeholder="Enter notes here..."></textarea><br>
+                <textarea class="col-lg-2" type="text" id="notes" name="notes" rows="4" cols="50" placeholder="Enter notes here..." required></textarea><br>
             </div>
             <div class="company_input">
                 <label for="company_name" class="col-md-4 col-form-label text-md-right">Bedrijfs Naam</label>
@@ -49,6 +49,11 @@
                 <label for="phone_number" class="col-md-4 col-form-label text-md-right">Telefoon Nummer</label>
                 <input class="col-lg-2" type="text" id="phone_number" name="phone_number" placeholder="0612345678 / 0761234567" required><br>
 
+                <div id="wrapper">
+                    <label for="yes_no" class="col-md-4 col-form-label text-md-right">BKR Registered</label>
+                    <input type="radio" name="yes_no" value="true" checked>Yes</input>
+                    <input type="radio" name="yes_no" value="false">No</input>
+                </div>
             </div>
 
             <input class="btn btn-primary" type="submit" value="Confirm" style="width: 25% ; margin-left: 25%;">

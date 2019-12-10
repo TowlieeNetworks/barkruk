@@ -1,6 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
+use App\Category;
 use App\Malfunctions;
 use Illuminate\Support\Facades\Redirect;
 
@@ -59,7 +60,9 @@ class malfunctionController extends Controller
      */
     public function show($id)
     {
-        //
+        $malfunction = Malfunctions::find($id);
+
+        return view('maintenance/show', ['malfunction' => $malfunction, 'id' => $id] );
     }
 
     /**

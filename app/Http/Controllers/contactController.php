@@ -60,7 +60,7 @@ class contactController extends Controller
         $mail = "thebartenders.alert@gmail.com";
         Mail::to($mail)->send(new \App\Mail\NewContact($data));
 
-        return view('Sales.index');
+        return view('welcome');
     }
 
     /**
