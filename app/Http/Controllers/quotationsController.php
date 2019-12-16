@@ -77,9 +77,7 @@ class quotationsController extends Controller
             'created_at' => $now,
             'updated_at' => $now,
         ]);
-        $companies = ComanyDetails::All()->where('BKR_registered', '==', null);
-
-        return view('sales.index' , ['companies'=>$companies]);
+        return redirect()->route('sales.index');
 
     }
 

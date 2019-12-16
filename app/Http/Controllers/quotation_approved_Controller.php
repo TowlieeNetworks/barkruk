@@ -75,7 +75,7 @@ class quotation_approved_Controller extends Controller
     public function update(Request $request, $id)
     {
         $quotation = quotation::find($id);
-        $quotation_rules = Quotation_Rules::find($id);
+        $quotation_rules = Quotation_Rules::where('quotation_id,', '=', $id);
 
 
         if ($request->yes_no == "true"){

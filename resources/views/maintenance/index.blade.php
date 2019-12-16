@@ -1,4 +1,6 @@
+@extends('layouts.app')
 
+@section('content')
 
 <?php
 
@@ -19,3 +21,5 @@
         <a href="{{ route('malfunction.show', $id) }}" class="btn btn-primary">Bekijken</a>
     </div>
 </div>
+
+    @endsection

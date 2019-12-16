@@ -17,7 +17,7 @@ class CreateQuotationRulesTable extends Migration
             $table->bigIncrements('id');
             $table->unsignedBigInteger('quotation_id');
             $table->unsignedBigInteger('supply_id');
-            $table->string('description');
+            $table->text('description');
             $table->date('delivery_date');
             $table->timestamps();
 

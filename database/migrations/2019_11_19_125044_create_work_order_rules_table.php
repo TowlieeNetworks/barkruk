@@ -17,7 +17,7 @@ class CreateWorkOrderRulesTable extends Migration
             $table->bigIncrements('id');
             $table->unsignedBigInteger('work_order_id');
             $table->unsignedBigInteger('used_product_id');
-            $table->string('description');
+            $table->text('description');
             $table->double('price');
             $table->timestamps();
 

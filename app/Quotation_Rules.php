@@ -11,10 +11,10 @@ class Quotation_Rules extends Model
     protected $fillable = ['quotation_id', 'supply_id', 'description' , 'created_at', 'updated_at'] ;
 
     public function quotation() {
-        return $this->belongsTo('\App\quotation', 'quotation_id');
+        return $this->belongsTo('\App\quotation', 'quotation_id', 'id');
     }
 
     public function Supply() {
-        return $this->belongsTo('\App\Supplies', 'supply_id');
+        return $this->belongsTo('\App\Supplies', 'supply_id', 'id');
     }
 }

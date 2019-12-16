@@ -41,7 +41,7 @@
                         @if($leaseRule->lease_id != $lease->id)
                         @else
                             <ul>
-                                <li>Product = {{ $products[$leaseRule->supply_id - 49]->name }}, Prijs = {{$leaseRule->price}}</li>
+                                <li>Product = {{ $products[$leaseRule->supply_id]->name }}, Prijs = {{$leaseRule->price}}</li>
                             </ul>
                         @endif
                     @endforeach
@@ -53,13 +53,12 @@
     <div>
         <h2 class="card-header" style="width: 40%; margin: 0 auto; padding-left: 10px;">FACTUUR INFO</h2>
         <div class="card" style="width: 40%; margin: 0 auto; align-items: normal; padding-left: 10px; padding-top: 10px;">
-            @foreach($facturen as $factuur)
-                @if($factuur->user_id != $user->id)
+            @foreach($quotation_rules as $quotation_rule)
+                @if($quotation_rule->quotation->customer_id != $user->id)
                 @else
                     <div class="card">
-                        <p>Product naam = {{ $products[$factuur->supply_id - 49]->name }}</p>
-                        <p>Hoeveelheid = {{ $factuur->amount }}</p>
-                        <p>Prijs per stuk = {{ $products[$factuur->supply_id - 49]->unit_price }}</p>
+                        <p>Product naam = {{ $products[$quotation_rule->supply_id - 1]->name }}</p>
+                        <p>Prijs per stuk = {{ $products[$quotation_rule->supply_id - 1]->unit_price }}</p>
                     </div>
                 @endif
             @endforeach

@@ -17,6 +17,7 @@ class CreateQuotationsTable extends Migration
             $table->bigIncrements('id');
             $table->unsignedBigInteger('sales_id');
             $table->unsignedBigInteger('customer_id');
+            $table->boolean('Goedgekeurd');
             $table->date('date');
             $table->timestamps();
 

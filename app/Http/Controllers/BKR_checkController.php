@@ -76,7 +76,7 @@ class BKR_checkController extends Controller
             $request->yes_no = 1;
         }
         else{
-            $request->yes_no = 2;
+            $request->yes_no = 0;
         }
 
         $company->update([

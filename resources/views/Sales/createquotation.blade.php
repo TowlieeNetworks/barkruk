@@ -20,7 +20,7 @@
 
         {{--        //doorsturen naar cont          --}}
         <div>
-        <label for="productname1" class="col-md-4 col-form-label text-md-right">product Naam</label>
+        <label for="productname1" class="col-md-4 col-form-label text-md-right">Klantnaam:</label>
 
         <select name="Customer" >
                     @foreach($customers as $customer)
@@ -28,7 +28,7 @@
                         @endforeach
                 </select>
         </div>
-        <label for="productname1" class="col-md-4 col-form-label text-md-right">product Naam</label>
+        <label for="productname1" class="col-md-4 col-form-label text-md-right">ProductNaam:</label>
 
                 <select name="Productname"  >
                     @foreach($supplies as $supply)
@@ -36,7 +36,7 @@
                     @endforeach
                 </select>
         <div>
-        <label class="col-md-4 col-form-label text-md-right">description</label>
+        <label class="col-md-4 col-form-label text-md-right">Description:</label>
         <input type="text" id="description" name="description" required>
         </div>
 
