@@ -2,7 +2,6 @@
 
 namespace App\Http\Controllers;
 
-use App\Factuur;
 use App\LeaseRules;
 use App\leases;
 use App\LeaseTypes;
@@ -12,6 +11,7 @@ use Illuminate\Http\Request;
 use User;
 use App\ComanyDetails;
 use App\Roles;
+use App\Quotation_Rules;
 
 class profileController extends Controller
 {
@@ -29,7 +29,8 @@ class profileController extends Controller
         $leaseTypes = LeaseTypes::all();
         $leaseRules = LeaseRules::all();
         $products = Supplies::all();
-        $facturen = Factuur::all();
+        $quotation = quotation::all();
+        $quotation_rules = Quotation_Rules::all();
 
         return view('additional.profile', ['user' => $user,
                                                 'companyDetails' => $companyDetails,
@@ -38,7 +39,9 @@ class profileController extends Controller
                                                 'leaseTypes' => $leaseTypes,
                                                 'leaseRules' => $leaseRules,
                                                 'products' => $products,
-                                                'facturen' => $facturen]);
+                                                'quotation' => $quotation,
+                                                'quotation_rules' =>$quotation_rules])
+        ;
     }
 
     /**

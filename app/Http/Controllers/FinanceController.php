@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\quotation;
 use Illuminate\Http\Request;
 
 class FinanceController extends Controller
@@ -13,7 +14,9 @@ class FinanceController extends Controller
      */
     public function index()
     {
-        return view('finance.index');
+        $finances = quotation::all()->where('Goedgekeurd', '==', null);
+
+        return view('finance.index', ['finances' => $finances]);
     }
 
     /**

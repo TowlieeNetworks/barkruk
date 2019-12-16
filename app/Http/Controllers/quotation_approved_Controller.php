@@ -2,11 +2,14 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
-use \App\User;
-use \App\ComanyDetails;
 
-class BKR_checkController extends Controller
+use Illuminate\Http\Request;
+use App\quotation;
+use App\User;
+use Mail;
+use App\Quotation_Rules;
+
+class quotation_approved_Controller extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -15,7 +18,7 @@ class BKR_checkController extends Controller
      */
     public function index()
     {
-        return view('sales.BKR_check');
+        //
     }
 
     /**
@@ -47,7 +50,7 @@ class BKR_checkController extends Controller
      */
     public function show($id)
     {
-
+        //
     }
 
     /**
@@ -58,8 +61,8 @@ class BKR_checkController extends Controller
      */
     public function edit($id)
     {
-        $company = ComanyDetails::find($id);
-        return view('sales/BKR_check_Edit', ['company'=>$company]);
+        $finance = quotation::find($id);
+        return view('finance/quotation_approved_edit', ['finance'=>$finance]);
     }
 
     /**
@@ -71,7 +74,10 @@ class BKR_checkController extends Controller
      */
     public function update(Request $request, $id)
     {
-        $company = ComanyDetails::find($id);
+        $quotation = quotation::find($id);
+        $quotation_rules = Quotation_Rules::find($id);
+
+
         if ($request->yes_no == "true"){
             $request->yes_no = 1;
         }
@@ -79,10 +85,20 @@ class BKR_checkController extends Controller
             $request->yes_no = 2;
         }
 
-        $company->update([
-            'BKR_registered' => $request->yes_no
+        $quotation->update([
+            'Goedgekeurd' => $request->yes_no
         ]);
-        return redirect()->route('sales.index');
+
+        $data = [
+            'name'  => $quotation->users->name,
+            'Supply' => $quotation_rules->Supply->name,
+            'description' => $quotation_rules->description
+        ];
+
+
+            Mail::to($quotation->users->email)->send(new \App\Mail\newquotationmail($data));
+
+        return redirect()->route('finance.index');
     }
 
     /**

@@ -19,7 +19,8 @@ class salesController extends Controller
      */
     public function index()
     {
-        return view('sales.index');
+        $companies = ComanyDetails::All()->where('BKR_registered', '==', null);
+        return view('sales.index' , ['companies'=>$companies]);
     }
 
     /**
@@ -67,15 +68,7 @@ class salesController extends Controller
            'postal_code'  => 'required|max:30',
            'city'         => 'required|string',
            'phone_number' => 'required|numeric',
-           'yes_no'       => 'required'
         ]);
-
-        if ($request->yes_no == "true"){
-            $request->yes_no = 1;
-        }
-        else{
-            $request->yes_no = 0;
-        }
 
         User::insert([
             'name'          => $request->full_name,
@@ -95,7 +88,6 @@ class salesController extends Controller
            'postal_code' => $request->postal_code,
            'city' => $request->city,
            'phone_number' => $request->phone_number,
-           'BKR_registered' => $request->yes_no,
            'created_at'    => now(),
            'updated_at'    => now()
         ]);

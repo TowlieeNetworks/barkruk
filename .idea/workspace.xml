@@ -31,6 +31,7 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+<<<<<<< Updated upstream
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/Factuur.php">
           <provider selected="true" editor-type-id="text-editor">
@@ -90,6 +91,13 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="81">
               <caret line="3" lean-forward="true" selection-start-line="3" selection-end-line="3" />
+=======
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/Http/Controllers/AdminController.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="527">
+              <caret line="70" column="53" selection-start-line="70" selection-start-column="53" selection-end-line="70" selection-end-column="53" />
+>>>>>>> Stashed changes
               <folding>
                 <element signature="e#40#62#0#PHP" expanded="true" />
               </folding>
@@ -98,6 +106,7 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
+<<<<<<< Updated upstream
         <entry file="file://$PROJECT_DIR$/app/Http/Controllers/contactController.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="756">
@@ -111,6 +120,9 @@
       </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/database/migrations/2019_12_09_223235_create_factuurs_table.php">
+=======
+        <entry file="file://$PROJECT_DIR$/resources/views/Sales/index.blade.php">
+>>>>>>> Stashed changes
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="783">
               <caret line="31" selection-start-line="31" selection-end-line="31" />
@@ -123,6 +135,15 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="648">
               <caret line="24" column="52" selection-start-line="24" selection-start-column="41" selection-end-line="24" selection-end-column="52" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/.env">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="340">
+              <caret line="20" selection-start-line="20" selection-end-line="20" />
             </state>
           </provider>
         </entry>
@@ -307,43 +328,39 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
             <path>
-              <item name="BARROC_INTENSE" type="b2602c69:ProjectViewProjectNode" />
-              <item name="BARROC_INTENSE" type="462c0819:PsiDirectoryNode" />
+              <item name="barkruk" type="b2602c69:ProjectViewProjectNode" />
+              <item name="barkruk" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="BARROC_INTENSE" type="b2602c69:ProjectViewProjectNode" />
-              <item name="BARROC_INTENSE" type="462c0819:PsiDirectoryNode" />
+              <item name="barkruk" type="b2602c69:ProjectViewProjectNode" />
+              <item name="barkruk" type="462c0819:PsiDirectoryNode" />
               <item name="app" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="BARROC_INTENSE" type="b2602c69:ProjectViewProjectNode" />
-              <item name="BARROC_INTENSE" type="462c0819:PsiDirectoryNode" />
+              <item name="barkruk" type="b2602c69:ProjectViewProjectNode" />
+              <item name="barkruk" type="462c0819:PsiDirectoryNode" />
               <item name="app" type="462c0819:PsiDirectoryNode" />
               <item name="Http" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="BARROC_INTENSE" type="b2602c69:ProjectViewProjectNode" />
-              <item name="BARROC_INTENSE" type="462c0819:PsiDirectoryNode" />
+              <item name="barkruk" type="b2602c69:ProjectViewProjectNode" />
+              <item name="barkruk" type="462c0819:PsiDirectoryNode" />
               <item name="app" type="462c0819:PsiDirectoryNode" />
               <item name="Http" type="462c0819:PsiDirectoryNode" />
               <item name="Controllers" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="BARROC_INTENSE" type="b2602c69:ProjectViewProjectNode" />
-              <item name="BARROC_INTENSE" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="Mail" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="BARROC_INTENSE" type="b2602c69:ProjectViewProjectNode" />
-              <item name="BARROC_INTENSE" type="462c0819:PsiDirectoryNode" />
+              <item name="barkruk" type="b2602c69:ProjectViewProjectNode" />
+              <item name="barkruk" type="462c0819:PsiDirectoryNode" />
               <item name="database" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
+<<<<<<< Updated upstream
               <item name="BARROC_INTENSE" type="b2602c69:ProjectViewProjectNode" />
               <item name="BARROC_INTENSE" type="462c0819:PsiDirectoryNode" />
               <item name="database" type="462c0819:PsiDirectoryNode" />
@@ -411,24 +428,29 @@
               <item name="resources" type="462c0819:PsiDirectoryNode" />
               <item name="views" type="462c0819:PsiDirectoryNode" />
               <item name="layouts" type="462c0819:PsiDirectoryNode" />
+=======
+              <item name="barkruk" type="b2602c69:ProjectViewProjectNode" />
+              <item name="barkruk" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="BARROC_INTENSE" type="b2602c69:ProjectViewProjectNode" />
-              <item name="BARROC_INTENSE" type="462c0819:PsiDirectoryNode" />
+              <item name="barkruk" type="b2602c69:ProjectViewProjectNode" />
+              <item name="barkruk" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="views" type="462c0819:PsiDirectoryNode" />
+>>>>>>> Stashed changes
+            </path>
+            <path>
+              <item name="barkruk" type="b2602c69:ProjectViewProjectNode" />
+              <item name="barkruk" type="462c0819:PsiDirectoryNode" />
               <item name="resources" type="462c0819:PsiDirectoryNode" />
               <item name="views" type="462c0819:PsiDirectoryNode" />
               <item name="Sales" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="BARROC_INTENSE" type="b2602c69:ProjectViewProjectNode" />
-              <item name="BARROC_INTENSE" type="462c0819:PsiDirectoryNode" />
-              <item name="routes" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -501,6 +523,7 @@
       <workItem from="1574696438592" duration="437000" />
       <workItem from="1574704482982" duration="6650000" />
       <workItem from="1574712512492" duration="3675000" />
+<<<<<<< Updated upstream
       <workItem from="1574769130402" duration="4637000" />
       <workItem from="1574952215436" duration="650000" />
       <workItem from="1575029680636" duration="9873000" />
@@ -514,16 +537,34 @@
       <workItem from="1575906036720" duration="65000" />
       <workItem from="1575925239094" duration="9033000" />
       <workItem from="1575979012640" duration="1066000" />
+=======
+      <workItem from="1574772898468" duration="7449000" />
+      <workItem from="1575028500496" duration="12887000" />
+      <workItem from="1575273664676" duration="12216000" />
+      <workItem from="1575374080814" duration="10083000" />
+      <workItem from="1575448099684" duration="1992000" />
+      <workItem from="1575633571756" duration="10739000" />
+      <workItem from="1575979007853" duration="935000" />
+      <workItem from="1575980447293" duration="827000" />
+>>>>>>> Stashed changes
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
+<<<<<<< Updated upstream
     <option name="totallyTimeSpent" value="89727000" />
+=======
+    <option name="totallyTimeSpent" value="105298000" />
+>>>>>>> Stashed changes
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <layout>
+<<<<<<< Updated upstream
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.16204691" />
+=======
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49872124" visible="true" weight="0.30597016" />
+>>>>>>> Stashed changes
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="npm" order="2" side_tool="true" />
       <window_info id="Favorites" order="3" side_tool="true" />
@@ -552,12 +593,17 @@
     <option featureType="com.intellij.fileTypeFactory" implementationName="*.env" />
   </component>
   <component name="editorHistoryManager">
+<<<<<<< Updated upstream
     <entry file="file://$PROJECT_DIR$/database/seeds/SuppliesTableSeeder.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="27">
           <caret line="17" column="39" selection-start-line="17" selection-start-column="39" selection-end-line="17" selection-end-column="39" />
         </state>
       </provider>
+=======
+    <entry file="file://$PROJECT_DIR$/resources/views/admin/newProspect.blade.php">
+      <provider selected="true" editor-type-id="text-editor" />
+>>>>>>> Stashed changes
     </entry>
     <entry file="file://$PROJECT_DIR$/app/Roles.php">
       <provider selected="true" editor-type-id="text-editor">
@@ -894,6 +940,7 @@
         </state>
       </provider>
     </entry>
+<<<<<<< Updated upstream
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/contactController.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="756">
@@ -908,6 +955,26 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="81">
           <caret line="3" lean-forward="true" selection-start-line="3" selection-end-line="3" />
+=======
+    <entry file="file://$PROJECT_DIR$/resources/views/Sales/index.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="11" column="60" selection-start-line="11" selection-start-column="60" selection-end-line="11" selection-end-column="60" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.env">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="20" selection-start-line="20" selection-end-line="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/AdminController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="527">
+          <caret line="70" column="53" selection-start-line="70" selection-start-column="53" selection-end-line="70" selection-end-column="53" />
+>>>>>>> Stashed changes
           <folding>
             <element signature="e#40#62#0#PHP" expanded="true" />
           </folding>

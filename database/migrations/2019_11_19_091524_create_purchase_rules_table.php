@@ -17,6 +17,7 @@ class CreatePurchaseRulesTable extends Migration
             $table->bigIncrements('id');
             $table->unsignedBigInteger('purchase_id');
             $table->unsignedBigInteger('supply_id');
+            $table->unsignedBigInteger('amount');
             $table->double('total_price');
             $table->date('delivery_date');
             $table->timestamps();

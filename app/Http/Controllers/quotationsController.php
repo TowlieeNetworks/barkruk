@@ -2,8 +2,14 @@
 
 namespace App\Http\Controllers;
 use App\quotation;
+use App\Supplies;
+use App\User;
+use App\Quotation_Rules;
+use Auth;
+use App\ComanyDetails;
 
 use Illuminate\Http\Request;
+use Illuminate\Routing\Route;
 
 class quotationsController extends Controller
 {
@@ -29,8 +35,14 @@ class quotationsController extends Controller
      */
     public function create()
     {
-
-        return view('sales/createquotation');
+        $quotation = quotation::all();
+        $supplies = Supplies::all();
+        $customers = User::all()->where('role_id', '==', 7);
+        return view('sales/createquotation', [
+            'quotations' => $quotation,
+            'supplies' => $supplies,
+            'customers' => $customers
+        ]);
     }
 
     /**
@@ -41,10 +53,34 @@ class quotationsController extends Controller
      */
     public function store(Request $request)
     {
-        quotation_input::insert ([
-        'bedrijfs_naam'=> $request->Company_name,
+        $id = Auth::id();
+        $now = now();
 
-    ]);
+        $customer = User::find($request->Customer);
+
+        quotation::insert([
+           'sales_id' => $id,
+           'customer_id' => $customer->id,
+           'date' => $now,
+            'created_at' => $now,
+            'updated_at' => $now
+        ]);
+
+        $quotation = quotation::where('created_at', $now)->first();
+        $product = Supplies::find($request->Productname);
+
+        Quotation_Rules::insert([
+            'quotation_id' => $quotation->id,
+            'supply_id' => $product->id,
+            'description' => $request->description,
+            'delivery_date' => $request->date,
+            'created_at' => $now,
+            'updated_at' => $now,
+        ]);
+        $companies = ComanyDetails::All()->where('BKR_registered', '==', null);
+
+        return view('sales.index' , ['companies'=>$companies]);
+
     }
 
     /**

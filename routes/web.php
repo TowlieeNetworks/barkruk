@@ -37,3 +37,6 @@ Route::resource('maintenance','MaintenanceController');
 Route::resource('head_maintenance','HeadMaintenanceController');
 Route::resource('inkoop','InkoopController');
 Route::resource('work_order','WorkOrderController');
+Route::resource('quotations', 'quotationsController');
+route::resource('BKR_checkController', 'BKR_checkController');
+route::resource('quotation_approved', 'quotation_approved_Controller');
